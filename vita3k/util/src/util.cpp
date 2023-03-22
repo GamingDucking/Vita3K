@@ -68,8 +68,6 @@ ExitCode init(const Root &root_paths, bool use_stdout) {
         assert(0);
     });
 
-    register_log_exception_handler();
-
     static std::terminate_handler old_terminate = nullptr;
     old_terminate = std::set_terminate([]() {
         try {
